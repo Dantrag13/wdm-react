@@ -1,0 +1,18 @@
+import React from 'react'
+
+export default function Advertisment() {
+    return (
+        <div>
+            <section class="advertisement">
+                <div class="advertisement__container">
+                <h1 class="advertisement__title">Lorem ipsum set <br />ammet test-test</h1>
+                <h5 class="advertisement__offer">let us help you get it all back!</h5>
+                <div class="advertisement__inner">
+                    <p class="inner__text">We currently take cases that are $10,000 US and up</p>
+                    <button href="#!" class="advertisement_btn button">Get a free consultation</button>
+                </div>
+                </div>
+            </section>
+        </div>
+    )
+}
