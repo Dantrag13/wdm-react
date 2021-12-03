@@ -505,7 +505,7 @@ body._lock {
   outline: none;
 }
 
-.form-item label {
+/* .form-item label {
   position: absolute;
   cursor: text;
   z-index: 2;
@@ -517,7 +517,7 @@ body._lock {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
+} */
 
 .form-item input:focus,
 .form-item input:valid,
