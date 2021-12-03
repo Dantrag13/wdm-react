@@ -1,14 +1,13 @@
 import React from 'react';
-// import style from './Input.module.css';
-// import './Input.css';
+import './Input.module.css';
 
 
-export default function Input({type, id, name, value, onChange, children, ...props}) {
+export default function Input({type, name, placeholder, onChange, children, ...props}) {
     return (
         <div className="form-item">
-            <input className="form-item__input" type={type} id={id} name={name} onChange={onChange} {...props} />
+            <input className="form-item__input" type={type} name={name} onChange={onChange} {...props} />
             <label for="firstname">
-                {children}
+                {placeholder}
             </label>
         </div>
     )

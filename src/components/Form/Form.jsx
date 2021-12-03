@@ -30,15 +30,15 @@ export default function Form() {
                     <h2 className="form__title">Contact <span>Us</span></h2>
                     <form onSubmit={onFormSubmit}>
                         <div className="form__inner">
-                            <Input type="text" name="firstName" id="firstName" onChange={onInputChange} required />
-                            <Input type="text" name="lastName" id="lastName" onChange={onInputChange} required />
+                            <Input type="text" name="firstName" placeholder="First Name" onChange={onInputChange} required />
+                            <Input type="text" name="lastName" placeholder="Last Name" onChange={onInputChange} required />
                             <IntlTelInput
                                 fieldName="phone"
                                 containerClassName="intl-tel-input"
                                 inputClassName="form-control"
                                 onPhoneNumberChange={onPhoneNumberChange}
                             />
-                            <Input type="text" name="email" id="email" onChange={onInputChange} required />
+                            <Input type="text" name="email" placeholder="Email" onChange={onInputChange} required />
                             <div className="form-item">
                                 <textarea type="text" name="description" id="textarea" name="textarea" autocomplete="off" required onChange={onInputChange} />
                                 <label for="textarea">Tell Us What Happened</label>
