@@ -197,6 +197,41 @@ body._lock {
 }
 
 /* Button here  */
+/* .button { */
+  /* display: inline-block;
+  border: 1px solid #121212;
+  padding: 8px 24px;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.button::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 1px solid #121212;
+  background-color: #ffffff;
+  right: 4px;
+  top: 4px;
+  z-index: -1;
+}
+
+.button:hover {
+  right: 4px;
+  top: 4px;
+}
+
+.button:hover::after {
+  right: -1px;
+  top: -1px;
+} */
+
+/* button end */
 
 .header__btn {
   background-color: #ffffff;

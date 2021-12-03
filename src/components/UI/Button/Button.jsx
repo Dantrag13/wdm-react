@@ -1,14 +1,14 @@
 import React from 'react';
-import css from './Button.module.css';
+import styles from './Button.module.css';
 
-export default function Button({ children, ...props }) {
-
-  // let btnClasses = className
-
-
+export default function Button({ className, href, children, ...props }) {
   return (
-    <button {...props} className={css.button}>
-      {children}
+    <button 
+      className={[styles.button, className].join(' ')}
+      href={href}
+      {...props}
+    >
+        {children}
     </button>
   )
 }
