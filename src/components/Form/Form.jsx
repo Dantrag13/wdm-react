@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import Button from '../UI/Button/Button'
 import Input from '../UI/Input/Input'
 
+import IntlTelInput from 'react-intl-tel-input';
+import 'react-intl-tel-input/dist/main.css';
+
 export default function Form() {
     const [formData, setFormData] = useState({});
     
@@ -15,6 +18,11 @@ export default function Form() {
         console.log('Sending JSON...', formData);
     }
 
+    const onPhoneNumberChange = (isValid, value, data) => {
+        console.log('=>', isValid, value, data);
+        setFormData((prevState) => ({...prevState, phone: value}));
+    }
+
     return (
         <div>
             <section className="form">
@@ -22,25 +30,15 @@ export default function Form() {
                     <h2 className="form__title">Contact <span>Us</span></h2>
                     <form onSubmit={onFormSubmit}>
                         <div className="form__inner">
-                            <Input type="text" name="firstName" id="firstName" onChange={onInputChange} />
-                            {/* <div className="form-item">
-                                <input type="text" name="firstName" id="firstname" autocomplete="off" required onChange={onInputChange} />
-                                <label for="firstname">First Name</label>
-                            </div> */}
-                            <Input type="text" name="lastName" id="lastName" onChange={onInputChange} />
-                            {/* <div className="form-item">
-                                <input type="text" name="lastName" id="lastname" autocomplete="off" required onChange={onInputChange} />
-                                <label for="lastname">Last Name</label>
-                            </div> */}
-                            <div className="form-item">
-                                <select type="text" id="phone" autocomplete="off" />
-                                <label for="phone">+1</label>
-                            </div>
-                            <Input type="text" name="email" id="email" onChange={onInputChange} />
-                            {/* <div className="form-item">
-                                <input type="text" name="email" id="email" autocomplete="off" required onChange={onInputChange} />
-                                <label for="email">Enter email</label>
-                            </div> */}
+                            <Input type="text" name="firstName" id="firstName" onChange={onInputChange} required />
+                            <Input type="text" name="lastName" id="lastName" onChange={onInputChange} required />
+                            <IntlTelInput
+                                fieldName="phone"
+                                containerClassName="intl-tel-input"
+                                inputClassName="form-control"
+                                onPhoneNumberChange={onPhoneNumberChange}
+                            />
+                            <Input type="text" name="email" id="email" onChange={onInputChange} required />
                             <div className="form-item">
                                 <textarea type="text" name="description" id="textarea" name="textarea" autocomplete="off" required onChange={onInputChange} />
                                 <label for="textarea">Tell Us What Happened</label>
